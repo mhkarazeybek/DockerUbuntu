@@ -1,14 +1,14 @@
 FROM ubuntu:18.04
 
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y ubuntu-desktop
+RUN apt-get update -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install ubuntu-desktop -y
 
 RUN rm /run/reboot-required*
 
 RUN useradd -m -s /bin/bash -G sudo mhkarazeybek
 
 RUN apt-get update -y
-RUN apt-get install -y xrdp
+RUN apt-get install xrdp -y
 RUN adduser xrdp ssl-cert
 
 RUN sed -i '3 a echo "\
