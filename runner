@@ -1,0 +1,3 @@
+#!/bin/bash
+
+service dbus start; /usr/lib/systemd/systemd-logind & service xrdp start

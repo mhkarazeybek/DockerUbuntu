@@ -6,7 +6,7 @@ docker create   --name docker-ubuntu \
                 -p 23389:3389 \
                 -t \
                 -v ubuntu_data:/home/mhkarazeybek \
-                ubuntu:18.04
+                docker-ubuntu
 
 
 echo "Your image and container have been built. It will now be started"
