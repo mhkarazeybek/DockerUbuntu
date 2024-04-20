@@ -34,6 +34,6 @@ RUN echo "root:mhk12345" | chpasswd
 
 WORKDIR /root
 
-COPY runner .
+# COPY runner .
 
 CMD service dbus start; /usr/lib/systemd/systemd-logind & service xrdp start & bash
