@@ -1,5 +1,7 @@
 #!/bin/bash
 
+docker rm -f docker-ubuntu
+
 docker build -t docker-ubuntu .
 
 docker create   --name docker-ubuntu \
@@ -11,4 +13,4 @@ docker create   --name docker-ubuntu \
 
 echo "Your image and container have been built. It will now be started"
 docker start docker-ubuntu
-echo "Use mhkarazeybek:1234" 
+docker exec -it docker-ubuntu bash
