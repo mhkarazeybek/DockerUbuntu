@@ -32,7 +32,7 @@ EXPOSE 3389
 # username & password
 RUN echo "root:mhk12345" | chpasswd
 
-WORKDIR /root
+WORKDIR /root/env/
 
 # COPY runner .
 
